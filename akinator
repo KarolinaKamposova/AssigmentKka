@@ -1,0 +1,100 @@
+import java.util.Scanner;
+
+public class akinator{
+
+public static void main(String args[]){
+
+try (Scanner YesNo = new Scanner(System.in)) {
+    boolean ok = false;
+    String yesno = "";
+    do {
+        System.out.println("Please, think of one of your classmate.");
+        do {
+            System.out.println("Is the classmate a woman?");
+            yesno = YesNo.next();
+            if (yesno.equals("yes")) {
+                do {
+                    System.out.println("Does the classmate have red hair?");
+                    yesno = YesNo.next();
+                    if (yesno.equals("yes")) {
+                        do {
+                            System.out.println("Does the classmate have a twin?");
+                            yesno = YesNo.next();
+                            if (yesno.equals("yes")) {
+                                do {
+                                    System.out.println("Does the classmate you are thinking of live with Patrícia Melová?");
+                                    yesno = YesNo.next();
+                                    if (yesno.equals("yes")) {
+                                        System.out.println("The classmate you are thinking of is Kaja.");
+                                        ok = true;
+                                    } else if (yesno.equals("no")) {
+                                        System.out.println("The classmate you are thinking of is Rebeka.");
+                                        ok = true;
+                                    } else {
+                                        System.out.println("I don't know what to do with "+yesno);
+                                        System.out.println("Please enter yes or no, in lower case pls.");
+                                    }
+                                } while (ok==false);
+                            } else if (yesno.equals("no")) {
+                                System.out.println("The classmate your are thinking of is Anfisa.");
+                                ok = true;
+                            } else {
+                                System.out.println("I don't know what to do with "+yesno);
+                                System.out.println("Please enter yes or no, in lower case pls.");
+                            }
+                        } while (ok==false); 
+                    } else if (yesno.equals("no")) {
+                        System.out.println("The classmate your are thinking of is Zoe.");
+                        ok = true;
+                    } else {
+                        System.out.println("I don't know what to do with "+yesno);
+                        System.out.println("Please enter yes or no, in lower case pls.");
+                    }
+                } while (ok==false);
+            } else if (yesno.equals("no")) {
+                do {
+                    System.out.println("Does the classmate speak Russian?");
+                    yesno = YesNo.next();
+                    if (yesno.equals("yes")) {
+                        do {
+                            System.out.println("Does the classmate wer glasses?");
+                            yesno = YesNo.next();
+                            if (yesno.equals("yes")) {
+                                System.out.println("The classmate you are thinking of is Ilya.");
+                                ok = true;
+                            } else if (yesno.equals("no")) {
+                                System.out.println("The classmate you are thinking of is Artom.");
+                                ok = true;
+                            } else {
+                                System.out.println("I don't know what to do with "+yesno);
+                                System.out.println("Please enter yes or no, in lower case pls.");
+                            }
+                        } while (ok==false);
+                    } else if (yesno.equals("no")) {
+                        System.out.println("The classmate your are thinking of is Max.");
+                        ok = true;
+                    } else {
+                        System.out.println("I don't know what to do with "+yesno);
+                        System.out.println("Please enter yes or no, in lower case pls.");
+                    }
+                } while (ok==false);
+            } else {
+                System.out.println("I don't know what to do with "+yesno);
+                System.out.println("Please enter yes or no, in lower case pls.");
+            }
+            //restarts or ends the game
+        } while (ok==false);
+        do {
+            System.out.println("Want to play again?");
+            yesno = YesNo.next();
+            if (!(yesno.equals("no") || yesno.equals("yes"))) {
+                System.out.println("I don't know what to do with "+yesno);
+                System.out.println("Please enter yes or no, in lower case pls."); 
+            }
+        }while (!(yesno.equals("no") || yesno.equals("yes")));
+    } while (yesno.equals("yes"));
+    System.out.println("Thanks for playing <3!");
+}}}
+
+//I truly hope that I will never see while loops for a long time (hopefully ever again).
+
