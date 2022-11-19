@@ -1,0 +1,49 @@
+public class assigment6{
+
+     public static void main(String args[]){
+ 		  celcius(0,0);
+		  sequen1(0,0);
+         sequen2(1,0,0);
+ 		 sequen3(0,0);
+
+     }
+
+    public static void celcius(double Fahrenheit,double Celsius){
+	      Fahrenheit= Math.random()*100;
+          Celsius = Math.round((Fahrenheit -32)*5/9);  
+          System.out.println("Temperature in Celsius is: "+Celsius);
+		  }
+	 
+	 public static void sequen1(int a, int b) {
+ 		for(a=0;a < 3; a++) {
+ 	    	for(b=0;b < 3; b++) {
+ 	    		if(a >= b)
+ 	    			System.out.print("*");
+ 	    	}
+ 	    	System.out.println();
+ 	    }
+
+ 	}	
+ 	public static void sequen2(int z, int k, int m) {
+ 			z=z;
+ 		for(k=0;k<=4; k++) {
+ 			for (m=0;m<4 ;m++){
+ 				System.out.print("*"+" ");  
+ 		}
+ 		System.out.println();
+ 		}
+ 		}
+ 	   public static void sequen3(int i,int j){
+ 		for (i = 0; i<= 2; i++)
+         {
+ 			for (j=0;j<=i;j++)
+ 			System.out.print(" ");
+ 			for (j=0;j<=2-i;j++)
+ 				System.out.print("*");
+ 			System.out.println();
+
+     }
+ }
+
+ }
+// Task: Write a Java program to calculate a Factorial of a number.
